@@ -76,7 +76,7 @@ jobs:
           push: true
           tags: ${{ steps.ecr-login.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}
           build-args: |
-            REACT_APP_MOVIE_API_URL=${{ env.REACT_APP_MOVIE_API_URL }}
+            REACT_APP_MOVIE_API_URL=http://3.224.109.105
 
   deploy:
     runs-on: ubuntu-latest
